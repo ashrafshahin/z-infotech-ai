@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { services, servicesPage } from "@/lib/site";
+import { projects, services, servicesPage } from "@/lib/site";
+
+// Quick lookup so each service card can link to its demo project's detail page.
+const projectMap = new Map(projects.map((project) => [project.id, project]));
 
 export const metadata = {
   title: "Services",
@@ -80,6 +83,25 @@ const serviceIcons = {
       <path d="M17 6h6v6" />
     </>
   ),
+  "website-design-development": (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18M9 21V9" />
+    </>
+  ),
+  "frontend-development": (
+    <>
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+      <circle cx="12" cy="12" r="3" />
+    </>
+  ),
+  "backend-development": (
+    <>
+      <rect x="2" y="2" width="20" height="8" rx="2" />
+      <rect x="2" y="14" width="20" height="8" rx="2" />
+      <path d="M6 6h.01M6 18h.01" />
+    </>
+  ),
 };
 
 export default function ServicesPage() {
@@ -113,9 +135,14 @@ export default function ServicesPage() {
         className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       >
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.map((service) => {
+            const project = projectMap.get(service.projectId);
+            return (
             <li key={service.id}>
-              <article className="group flex h-full flex-col rounded-2xl border border-navy-700/60 bg-navy-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-xl hover:shadow-brand-600/10">
+              <article
+                id={service.id}
+                className="group flex h-full scroll-mt-24 flex-col rounded-2xl border border-navy-700/60 bg-navy-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-xl hover:shadow-brand-600/10"
+              >
                 <span
                   aria-hidden="true"
                   className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-600/10 text-accent-400"
@@ -146,7 +173,7 @@ export default function ServicesPage() {
                     {servicesPage.card.contactLabel}
                   </Link>
                   <Link
-                    href={`/portfolio#${service.projectId}`}
+                    href={project ? `/portfolio/${project.slug}` : "/portfolio"}
                     className="inline-flex items-center justify-center rounded-lg border border-navy-700 px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:border-accent-500/50 hover:text-white"
                   >
                     {servicesPage.card.projectLabel}
@@ -154,7 +181,8 @@ export default function ServicesPage() {
                 </div>
               </article>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </section>
 
