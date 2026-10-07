@@ -1,0 +1,12 @@
+# Z InfoTech AI Ltd — Project Rules
+
+- Project: marketing website for Z InfoTech AI Ltd, a UK-registered IT company.
+- Stack: Next.js App Router, JavaScript only (.js / .jsx files). Do NOT use TypeScript: no .ts/.tsx files, no type annotations, no tsconfig. Tailwind CSS only. No other UI libraries.
+- Pages: Home, About, Services, Portfolio, Contact.
+- Design: modern, professional, clean. Dark navy/slate with blue and cyan accents. Inter font via next/font.
+- Mobile-first and responsive for phone, tablet, desktop and large screens (sm, md, lg, xl).
+- All text content lives in lib/site.js, never hardcoded in pages.
+- Use British English.
+- Use semantic HTML, accessible labels, alt text, visible focus states.
+- Use Server Components by default; "use client" only when needed.
+- Work on one task at a time, only edit files the task mentions, and run npm run build after each task and fix errors.
