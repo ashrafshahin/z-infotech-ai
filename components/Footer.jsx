@@ -7,8 +7,13 @@ async function getCurrentYear() {
   return new Date().getFullYear();
 }
 
+const headingClass =
+  "text-sm font-semibold uppercase tracking-wider text-slate-300";
+const linkClass = "text-sm text-slate-400 transition-colors hover:text-accent-400";
+
 export default async function Footer() {
   const year = await getCurrentYear();
+  const phoneHref = `tel:${company.phone.replace(/[^+\d]/g, "")}`;
 
   return (
     <footer className="border-t border-navy-700/70 bg-navy-900">
@@ -25,17 +30,14 @@ export default async function Footer() {
           </p>
         </div>
 
-        <nav aria-label="Footer">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
+        <nav aria-labelledby="footer-nav-heading">
+          <h2 id="footer-nav-heading" className={headingClass}>
             Navigation
           </h2>
           <ul className="mt-4 space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm text-slate-400 transition-colors hover:text-accent-400"
-                >
+                <Link href={link.href} className={linkClass}>
                   {link.name}
                 </Link>
               </li>
@@ -44,35 +46,33 @@ export default async function Footer() {
         </nav>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
-            Contact
-          </h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-400">
-            <li>
+          <h2 className={headingClass}>Contact</h2>
+          <address className="mt-4 space-y-2 text-sm not-italic text-slate-400">
+            <p>
               <a
                 href={`mailto:${company.email}`}
                 className="transition-colors hover:text-accent-400"
               >
                 {company.email}
               </a>
-            </li>
-            <li>
-              <a
-                href={`tel:${company.phone.replace(/[^+\d]/g, "")}`}
-                className="transition-colors hover:text-accent-400"
-              >
+            </p>
+            <p>
+              <a href={phoneHref} className="transition-colors hover:text-accent-400">
                 {company.phone}
               </a>
-            </li>
-            <li>{company.location}</li>
-            <li>Company number: {company.companyNumber}</li>
-          </ul>
+            </p>
+            <p>{company.location}</p>
+            <p>Company number: {company.companyNumber}</p>
+          </address>
         </div>
       </div>
 
       <div className="border-t border-navy-700/70 py-6">
-        <p className="mx-auto w-full max-w-7xl px-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+        <p className="px-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
           &copy; {year} {company.name}. All rights reserved.
+        </p>
+        <p className="mt-1 px-4 text-center text-xs text-slate-600 sm:px-6 lg:px-8">
+          Powered by Ashraf Shahin
         </p>
       </div>
     </footer>
