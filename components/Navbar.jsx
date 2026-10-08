@@ -9,7 +9,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close the mobile menu with the Escape key.
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  // Close the menu with the Escape key.
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === "Escape") setIsOpen(false);
@@ -29,6 +34,8 @@ export default function Navbar() {
           className="text-lg font-bold tracking-tight text-white transition-colors hover:text-accent-400"
         >
           {company.shortName}
+          <img src="/images/logo.jpeg" alt="logo" srcset="" />
+          
           <span aria-hidden="true" className="text-accent-400">
             .
           </span>
@@ -110,7 +117,6 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
-                  onClick={() => setIsOpen(false)}
                   className={`block rounded-md px-3 py-2 text-base font-medium transition-colors ${
                     isActive
                       ? "bg-navy-800 text-accent-400"
@@ -126,7 +132,6 @@ export default function Navbar() {
         <div className="px-4 pb-4 sm:px-6">
           <Link
             href="/contact"
-            onClick={() => setIsOpen(false)}
             className="block w-full rounded-lg bg-brand-600 px-4 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-500"
           >
             Get in touch

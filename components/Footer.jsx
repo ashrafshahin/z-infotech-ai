@@ -20,7 +20,8 @@ export default async function Footer() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <p className="text-lg font-bold text-white">
-            {company.shortName}
+            {/* {company.shortName} */}
+            <img src="/images/logo.jpeg" alt="logo" srcset="" />
             <span aria-hidden="true" className="text-accent-400">
               .
             </span>
