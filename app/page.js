@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-linear-to-b from-navy-900 via-navy-950 to-navy-950">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-40 left-1/2 h-112 w-2xl -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
+          <div className="absolute -top-40 left-1/2 h-112 w-2xl -translate-x-1/2 rounded-full blur-3xl" />
           <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-accent-500/10 blur-3xl" />
         </div>
 

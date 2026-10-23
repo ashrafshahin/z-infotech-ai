@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({ params }) {
       {/* Hero */}
       <section className="relative overflow-hidden bg-linear-to-b from-navy-900 via-navy-950 to-navy-950">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 left-1/2 h-96 w-152 -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
+          <div className="absolute -top-32 left-1/2 h-96 w-152 -translate-x-1/2 rounded-full blur-3xl" />
           <div className="absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-accent-500/10 blur-3xl" />
         </div>
 
@@ -125,7 +125,7 @@ export default async function ProjectDetailPage({ params }) {
       <div className="mx-auto -mt-20 grid w-full max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-3 lg:gap-14 lg:px-8">
         <div className="space-y-12 lg:col-span-2">
           <div
-            className={`relative aspect-16/10 overflow-hidden rounded-2xl border border-navy-700/60 bg-linear-to-br ${
+            className={`relative aspect-22/10 overflow-hidden rounded-2xl border border-navy-700/60 bg-red-500/30 ${
               placeholderGradients[index % placeholderGradients.length]
             }`}
           >
