@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950">
+      <section className="relative overflow-hidden `bg-gradient-to-b` from-navy-900 via-navy-950 to-navy-950">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-40 left-1/2 h-[28rem] w-[42rem] -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
+          <div className="absolute -top-40 left-1/2 h-112 w-2xl -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
           <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-accent-500/10 blur-3xl" />
         </div>
 
@@ -45,7 +45,7 @@ export default function Home() {
       {/* What we do */}
       <section
         aria-labelledby="services-heading"
-        className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+        className="mx-auto -mt-30 w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       >
         <div className="max-w-2xl">
           <h2
@@ -68,7 +68,7 @@ export default function Home() {
               >
                 <span
                   aria-hidden="true"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-accent-500 text-sm font-bold text-white"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-brand-500 to-accent-500 text-sm font-bold text-white"
                 >
                   {service.title.charAt(0)}
                 </span>
@@ -140,7 +140,7 @@ export default function Home() {
         aria-labelledby="cta-heading"
         className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       >
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-600 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent-400/20 blur-3xl"

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 /* Brand palette — Tailwind v4 CSS-first theme (no tailwind.config.js) */
-@theme {
+ @theme {
   /* Brand blue */
-  --color-brand-50: #eff6ff;
+  /* --color-brand-50: #eff6ff; 
   --color-brand-100: #dbeafe;
   --color-brand-200: #bfdbfe;
   --color-brand-300: #93c5fd;
@@ -13,24 +13,56 @@
   --color-brand-700: #1d4ed8;
   --color-brand-800: #1e40af;
   --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
+  --color-brand-950: #172554; */
 
   /* Cyan accent */
-  --color-accent-300: #67e8f9;
+  /* --color-accent-300: #67e8f9;
   --color-accent-400: #22d3ee;
   --color-accent-500: #06b6d4;
-  --color-accent-600: #0891b2;
+  --color-accent-600: #0891b2; */
 
   /* Dark navy surfaces */
-  --color-navy-950: #070c1a;
+  /* --color-navy-950: #070c1a;
   --color-navy-900: #0b1224;
   --color-navy-800: #111a33;
-  --color-navy-700: #1a2547;
+  --color-navy-700: #1a2547; */
+} 
+
+@theme {
+  /* Brand: professional signal red */
+  --color-brand-50: #fff1f1;
+ --color-brand-100: #ffe0e0;
+  --color-brand-200: #ffc7c7;
+  --color-brand-300: #ffa0a0;
+  --color-brand-400: #f87171;
+  --color-brand-500: #ef4444;
+  --color-brand-600: #d93636;
+  --color-brand-700: #b92525;
+  --color-brand-800: #982424;
+  --color-brand-900: #7f2525;
+  --color-brand-950: #450f0f;
+
+  /* Accent: premium gold */
+  --color-accent-300: #e9cb83;
+  --color-accent-400: #d9b566;
+  --color-accent-500: #c49a45;
+  --color-accent-600: #a77b2e;
+
+  /* Neutral: graphite and grey */
+  --color-navy-950: #111318;
+  --color-navy-900: #20242b;
+  --color-navy-800: #292d33;
+  --color-navy-700: #414852;
 }
 
-@theme inline {
+/* @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", sans-serif;
+} */
+
+@theme {
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @layer base {
@@ -39,7 +71,7 @@
   }
 
   body {
-    background-color: var(--color-navy-950);
+    background-color: var(--color-navy-950); 
     color: var(--color-slate-200);
   }
 

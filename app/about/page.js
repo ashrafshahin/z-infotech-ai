@@ -11,9 +11,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950">
+      <section className="relative overflow-hidden bg-linear-to-b from-navy-900 via-navy-950 to-navy-950">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 left-1/2 h-96 w-[38rem] -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
+          <div className="absolute -top-32 left-1/2 h-96 w-152 -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
           <div className="absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-accent-500/10 blur-3xl" />
         </div>
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <div className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="mx-auto -mt-20 w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <section
             aria-labelledby="vision-heading"
@@ -76,7 +76,7 @@ export default function AboutPage() {
       {/* Managing Director's message */}
       <section
         aria-labelledby="md-heading"
-        className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+        className="mx-auto -m-15 w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       >
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[18rem_1fr] lg:gap-14">
             <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:mx-0 lg:max-w-none">
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 <div className="h-full rounded-2xl border border-navy-700/60 bg-navy-950/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500/60 hover:shadow-xl hover:shadow-accent-500/10">
                   <span
                     aria-hidden="true"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-accent-500 text-sm font-bold text-white"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-brand-500 to-accent-500 text-sm font-bold text-white"
                   >
                     {value.title.charAt(0)}
                   </span>
@@ -200,7 +200,7 @@ export default function AboutPage() {
         aria-labelledby="about-cta-heading"
         className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8"
       >
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-600  to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent-400/20 blur-3xl"

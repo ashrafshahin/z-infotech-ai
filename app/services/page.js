@@ -108,9 +108,9 @@ export default function ServicesPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950">
+      <section className="relative overflow-hidden `bg-gradient-to-b` from-navy-900 via-navy-950 to-navy-950">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 left-1/2 h-96 w-[38rem] -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
+          <div className="absolute -top-32 left-1/2 h-96 w-152 -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
           <div className="absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-accent-500/10 blur-3xl" />
         </div>
 
@@ -132,7 +132,7 @@ export default function ServicesPage() {
       {/* Service cards */}
       <section
         aria-labelledby="services-heading"
-        className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+        className="mx-auto -mt-25 w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       >
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
@@ -191,7 +191,7 @@ export default function ServicesPage() {
         aria-labelledby="services-cta-heading"
         className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8"
       >
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-800 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent-400/20 blur-3xl"

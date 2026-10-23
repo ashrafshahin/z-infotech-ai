@@ -22,9 +22,9 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950">
+      <section className="relative overflow-hidden bg-linear-to-b from-navy-900 via-navy-950 to-navy-950">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 left-1/2 h-96 w-[38rem] -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
+          <div className="absolute -top-32 left-1/2 h-96 w-152 -translate-x-1/2 rounded-full bg-brand-600/20 blur-3xl" />
           <div className="absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-accent-500/10 blur-3xl" />
         </div>
 
@@ -46,7 +46,7 @@ export default function PortfolioPage() {
       {/* Project cards */}
       <section
         aria-labelledby="portfolio-heading"
-        className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+        className="mx-auto -mt-25 w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       >
         <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {projects.map((project, index) => (
@@ -56,7 +56,7 @@ export default function PortfolioPage() {
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy-700/60 bg-navy-900 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-2xl hover:shadow-brand-600/15"
               >
                 <div
-                  className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${
+                  className={`relative aspect-18/10 overflow-hidden bg-white/10 ${
                     placeholderGradients[index % placeholderGradients.length]
                   }`}
                 >
@@ -138,7 +138,7 @@ export default function PortfolioPage() {
         aria-labelledby="portfolio-cta-heading"
         className="mx-auto w-full max-w-7xl px-4 sm:px-6"
       >
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-600 to-navy-900 px-6 py-16 text-center sm:px-16 sm:py-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent-400/20 blur-3xl"
